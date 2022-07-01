@@ -31,6 +31,13 @@ Install Apache and configure driver loading (macOS)
   
   echo "LoadModule php7_module /opt/homebrew/opt/php@7.4/lib/httpd/modules/libphp7.so" >> /opt/homebrew/etc/httpd/httpd.conf
   (echo "<FilesMatch .php$>"; echo "SetHandler application/x-httpd-php"; echo "</FilesMatch>";) >> /opt/homebrew/etc/httpd/httpd.conf
+  
+Microsoft ODBC 18
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+HOMEBREW_NO_ENV_FILTERING=1 ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
